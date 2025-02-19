@@ -113,7 +113,31 @@
 
       <section class="reviews" data-test="reviews"></section>
 
-      <section class="contacts" data-test="contacts"></section>
+      <section class="contacts" data-test="contacts">
+        <div class="contacts__container container">
+          <h2 class="contacts__title title">Контакты</h2>
+
+          <div class="contacts__wrapper">
+            <h3 class="contacts__name contacts__name--office">Центральный офис</h3>
+            <address class="contacts__address">г. Новосибирск, ул. Щетинкина 68, культурный центр</address>
+            <h3 class="contacts__name contacts__name--phone">Телефон</h3>
+            <a class="contacts__link contacts__link--phone" href="tel:+796387687676">+7 963 876 876 76</a>
+            <h3 class="contacts__name contacts__name--email">Email</h3>
+            <a class="contacts__link contacts__link--email" href="mailto:info@stazh.ru">Info@stazh.ru</a>
+          </div>
+
+          <div class="contacts__map-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x" width="1240" height="486" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x" width="678" height="500" type="image/webp">
+              <source srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x" width="290" height="240" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="img/map/map-desktop@1x.png 1x, img/map/map-desktop@2x.png 2x" width="1240" height="486" type="image/png">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet@1x.png 1x, img/map/map-tablet@2x.png2x" width="678" height="500" type="image/png">
+              <img class="contacts__map" src="img/map/map-mobile@1x.png" srcset="img/map/map-mobile@2x.png 2x" width="290" height="240" alt="Мы на карте.">
+            </picture>
+          </div>
+        </div>
+      </section>
 
       <section class="form" data-test="form"></section>
     </main>

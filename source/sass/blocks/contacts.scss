@@ -1,0 +1,138 @@
+.contacts {
+  margin-bottom: 500px;
+  background-color: $blue;
+}
+
+.contacts__container {
+  padding: 76px 0 70px;
+
+  @media (min-width: $tablet-width) {
+    padding: 100px 0 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 604px);
+    gap: 18px 32px;
+    padding: 120px 0 120px;
+  }
+}
+
+.contacts__title {
+  margin-bottom: 35px;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 401px 1fr 1fr;
+    gap: 22.5px 20.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 263px 132px 104px;
+    gap: 24px 52.5px;
+    margin-top: 1px;
+  }
+}
+
+.contacts__name {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  color: rgba(240, 239, 233, 0.8);
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    &--office {
+      grid-row: 1;
+    }
+
+    &--phone {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    &--email {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  }
+}
+
+.contacts__address {
+  margin-bottom: 21px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    grid-column: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
+}
+
+.contacts__link {
+  display: inline-block;
+  margin-bottom: 21px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $primary;
+    border-bottom: 1px solid $primary;
+  }
+
+  &:active {
+    opacity: 1;
+    color: $white;
+    border-bottom: 1px solid $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+
+    &--phone {
+      min-width: 132px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-start;
+    line-height: 17px;
+  }
+}
+
+.contacts__map-wrapper {
+  margin-top: 9px;
+  padding-top: 30px;
+  border-top: 2px solid rgba(255, 255, 255, .2);
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    padding-top: 40px;
+  }
+}
