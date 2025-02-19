@@ -1,0 +1,150 @@
+.grant {
+  color: $white;
+  background-color: $blue;
+}
+
+.grant__container {
+  padding: 71px 0 70px;
+
+  @media (min-width: $tablet-width) {
+    padding: 100px 0 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 498px);
+    gap: 40px 138px;
+    padding: 120px 0 120px;
+  }
+}
+
+.grant__title {
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.grant__description p {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 498px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    line-height: 26px;
+  }
+}
+
+.grant__image-wrapper {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1;
+  }
+}
+
+.grant__conditions {
+  @media (min-width: $desktop-width) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+}
+
+.grant__subtitle {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+    margin-bottom: 55px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.grant__list {
+  @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 48px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 23px;
+  }
+}
+
+.grant__item {
+  position: relative;
+  padding: 24px 25px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $beige;
+  border: 1px solid $beige;
+  border-radius: 16px;
+  counter-increment: grant-counter;
+
+  &::before {
+    content: counter(grant-counter);
+    position: absolute;
+    width: 25px;
+    height: 32px;
+    top: -6px;
+    left: -13px;
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 500;
+    align-content: center;
+    text-align: center;
+    color: $white;
+    background-color: $blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 25px;
+    font-size: 16px;
+
+    &::before {
+      font-size: 22px;
+      width: 42px;
+      height: 42px;
+      top: -16px;
+      left: -21px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
+}
