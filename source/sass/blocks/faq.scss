@@ -1,0 +1,262 @@
+.faq__container {
+  padding: 50px 0 50px;
+}
+
+.faq__title {
+  margin-bottom: 29px;
+  color: $blue;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.faq__list {
+  @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1028px;
+    margin: 0 auto;
+  }
+}
+
+.faq__item {
+  padding: 22px 15px 21px;
+  border: 2px solid $blue;
+  border-radius: 14px;
+  cursor: pointer;
+
+  &:nth-child(n + 4) {
+    padding: 20px 15px 19px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 37px 30px;
+    border-radius: 16px;
+
+    &:nth-child(n + 4) {
+      padding: 30px;
+
+      .faq__icon {
+        top: 0;
+        transform: none;
+      }
+    }
+
+    &:nth-child(4) .faq__question {
+      max-width: 406px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 43px 40px;
+
+    &:nth-child(n + 4) {
+      padding: 40px;
+    }
+
+    &:nth-child(4) .faq__question {
+      max-width: 894px;
+    }
+  }
+
+  &--active {
+    background-color: $blue;
+
+    @media (min-width: $tablet-width) {
+      padding: 37px 30px 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 43px 40px 40px;
+    }
+  }
+}
+
+.faq__item p {
+  max-height: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: $blue;
+  transition: all 0.4s ease;
+  opacity: 0;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
+}
+
+.faq__item--active p {
+  max-height: 250px;
+  margin-top: 22px;
+  color: $beige;
+  opacity: 1;
+  transition: all 0.4s ease;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 23px;
+  }
+}
+
+.faq__button {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  color: $blue;
+  text-align: left;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.faq__item--active .faq__button {
+  color: $white;
+}
+
+.faq__question {
+  display: inline-block;
+  max-width: 187px;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 564px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 894px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.faq__icon {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: $blue;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 18px;
+    width: 1px;
+    background-color: $white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: $white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 1px;
+  }
+}
+
+.faq__item:hover,
+.faq__item:focus-within {
+  background-color: $white;
+
+  & .faq__icon {
+    background-color: $white;
+    border: 1px solid $blue;
+  }
+}
+
+.faq__item:hover .faq__icon::before,
+.faq__item:hover .faq__icon::after,
+.faq__item:focus-within .faq__icon::before,
+.faq__item:focus-within .faq__icon::after {
+  background-color: $blue;
+}
+
+.faq__item:active {
+  background-color: $white;
+}
+
+.faq__item:active .faq__icon {
+  background-color: $blue;
+
+  &::before,
+  &::after {
+    background-color: $white;
+  }
+}
+
+.faq__item--active:hover,
+.faq__item--active:focus-within {
+  background-color: $blue;
+}
+
+.faq__item--active:hover .faq__icon,
+.faq__item--active:focus-within .faq__icon {
+  background-color: $blue;
+  border: 1px solid $white;
+}
+
+.faq__item--active:hover .faq__icon::before,
+.faq__item--active:hover .faq__icon::after,
+.faq__item--active:focus-within .faq__icon::before,
+.faq__item--active:focus-within .faq__icon::after {
+  background-color: $white;
+}
+
+.faq__item--active:active {
+  background-color: $active;
+}
+
+.faq__item--active:active .faq__icon {
+  background-color: $white;
+}
+
+.faq__item--active:active .faq__icon::before,
+.faq__item--active:active .faq__icon::after {
+  background-color: $blue;
+}
+
+.faq__item--active .faq__icon {
+  background-color: $white;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    background-color: $blue;
+  }
+}
