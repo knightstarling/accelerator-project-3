@@ -1,7 +1,6 @@
 .form {
   position: relative;
-  margin-bottom: 500px;
-  padding: 40px 0 40px;
+  padding: 40px 0 37px;
   background-image:
     image-set(
       url("../../img/form/form-mobile@1x.webp") type("image/webp") 1x,
@@ -18,7 +17,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 43px;
+    height: 40px;
     background-color: $beige;
   }
 

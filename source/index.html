@@ -35,7 +35,7 @@
         <h1 class="visually-hidden">Internship — профессиональное обучение за рубежом.</h1>
       </section>
 
-      <section class="about" data-test="about">
+      <section class="about" id="about" data-test="about">
         <div class="about__container container">
           <div class="about__description">
             <h2 class="about__title title">О проекте «Стажировка»</h2>
@@ -66,7 +66,7 @@
         </div>
       </section>
 
-      <section class="programs" data-test="programs">
+      <section class="programs" id="programs" data-test="programs">
         <div class="programs__container container">
           <div class="swiper-container">
             <div class="swiper-programs">
@@ -166,7 +166,7 @@
         </div>
       </section>
 
-      <section class="grant" data-test="grant">
+      <section class="grant" id="grant" data-test="grant">
         <div class="grant__container container">
           <div class="grant__description">
             <h2 class="grant__title title">Как поехать</h2>
@@ -205,7 +205,7 @@
         </div>
       </section>
 
-      <section class="news" data-test="news"></section>
+      <section class="news" id="news" data-test="news"></section>
 
       <section class="faq" data-test="FAQ">
         <div class="faq__container container">
@@ -355,7 +355,7 @@
         </div>
       </section>
 
-      <section class="contacts" data-test="contacts">
+      <section class="contacts" id="contacts" data-test="contacts">
         <div class="contacts__container container">
           <h2 class="contacts__title title">Контакты</h2>
 
@@ -400,19 +400,17 @@
                 <label class="form__label" for="message">Ваше сообщение</label>
                 <textarea class="form__input form__input--textarea" id="message" name="message" required></textarea>
               </div>
-              <div class="form__field">
+              <div class="form__field form__field--select">
                 <label class="form__label form__label--select" for="city">Выберите город</label>
                 <select class="form__input form__input--select" id="city" name="city" value="">
 
                 </select>
               </div>
-              <!-- <div class="form__field"> -->
               <label class="form__label-checkbox">
                 <input class="form__input visually-hidden" type="checkbox" name="data-processing-consent" id="checkbox" required>
                 <span class="form__checkbox"></span>
                 Я согласен на обработку моих персональных <br class="form__break">данных
               </label>
-              <!-- </div> -->
 
               <button class="form__button button button--primary-blue" type="submit">Отправить</button>
             </form>
@@ -421,7 +419,57 @@
       </section>
     </main>
 
-    <footer class="footer" data-test="footer"></footer>
+    <footer class="footer" data-test="footer">
+      <div class="footer__container container">
+        <div class="footer__logo logo">
+          <svg class="logo__image" width="30" height="30" role="img" aria-label="Логотип Internship.">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
+        </div>
+
+        <ul class="footer__menu">
+          <li class="footer__item">
+            <a class="footer__link" href="#about">О проекте</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#programs">Программы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#grant">Как поехать</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#news">Новости</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+
+        <a class="footer__privacy-policy" href="#">Политика конфиденциальности</a>
+        <p class="footer__copyright">Стажировка © 2023 Все права защищены</p>
+
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">VK</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--ok" href="https://ok.ru/htmlacademy" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">Одноклассники</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--reddit" href="https://forum.academy/" target="_blank" rel="noreferrer noopener">
+              <span class="visually-hidden">Reddit</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script type="module" src="js/main.js"></script>
   </body>
