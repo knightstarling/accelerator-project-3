@@ -79,7 +79,7 @@
     }
 
     &::after {
-      transform: rotate(45deg) translateY(-60%);
+      transform: rotate(45deg) translateY(-50%);
       right: 20px;
       background-color: $white;
       transition: background-color 0.3s ease;
@@ -117,6 +117,59 @@
     &::before {
       width: 46px;
       height: 46px;
+    }
+  }
+}
+
+.button--circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    mask-image: url("/__spritemap#sprite-arrow-link-view");
+    mask-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  &:hover {
+    background-color: $white;
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+      background-color: $blue;
+      transition: transform 0.3s ease, right 0.3s ease, background-color 0.3s ease;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $blue;
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+      background-color: $white;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &:active {
+    background-color: $white;
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+      right: 20px;
+      background-color: rgba(49, 109, 194, 0.7);
+      transition: background-color 0.3s ease;
     }
   }
 }
