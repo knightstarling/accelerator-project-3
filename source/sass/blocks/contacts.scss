@@ -102,13 +102,13 @@
   &:focus-visible {
     outline: none;
     color: $primary;
-    border-bottom: 1px solid $primary;
+    box-shadow: 0px 1px 0px 0px $primary;
   }
 
   &:active {
     opacity: 1;
     color: $white;
-    border-bottom: 1px solid $white;
+    box-shadow: 0px 1px 0px 0px $white;
   }
 
   @media (min-width: $tablet-width) {

@@ -2,3 +2,131 @@
   width: 100%;
   height: 100%;
 }
+
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      min-width: 562px;
+      max-width: 562px;
+      bottom: 13px;
+      height: 2px;
+      background-color: rgba(49, 109, 194, 0.2);
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 1136px;
+      max-width: 1136px;
+    }
+  }
+}
+
+.swiper-reviews {
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 65px;
+  }
+}
+
+.swiper-slide--reviews {
+  @media (min-width: $tablet-width) {
+    max-width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 604px;
+  }
+}
+
+.swiper-scrollbar-drag {
+  @media (min-width: $tablet-width) {
+    height: 2px;
+    background-color: $blue;
+  }
+}
+
+.swiper-reviews .swiper-navigation-wrapper {
+  position: absolute;
+  display: flex;
+  gap: 6px;
+  top: -2px;
+  right: -3px;
+  width: 54px;
+  height: 22px;
+
+  @media (min-width: $tablet-width) {
+    gap: 8px;
+    top: auto;
+    bottom: 3px;
+    right: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -1px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: $blue;
+    mask-image: url("/__spritemap#sprite-arrow-link-view");
+    mask-size: 8px 8px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $white;
+    border-radius: 30px;
+  }
+
+  &:active {
+    background-color: $white;
+    border-radius: 30px;
+    opacity: 1;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+}
+
+.swiper-button-prev {
+  transform: rotate(-180deg);
+}
+
+.swiper-button-prev:disabled,
+.swiper-button-next:disabled {
+  opacity: 1;
+  pointer-events: none;
+
+  &::before,
+  &::after {
+    background-color: $disabled;
+  }
+}
